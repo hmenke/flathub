@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>net.code_industry.MasterPDFEditor4</id>
+  <launchable type="desktop-id">net.code_industry.MasterPDFEditor4.desktop</launchable>
+  <name>Master PDF Editor</name>
+  <developer_name>Code Industry</developer_name>
+  <summary>Master PDF Editor is a full solutions for work with PDF documents</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <url type="homepage">https://code-industry.net/masterpdfeditor/</url>
+  <description>
+    <ul>
+      <li>Edit PDF text and images, Mark and annotate, Merge and split.</li>
+      <li>JavaScript and Dynamic XFA form support.</li>
+      <li>Validation Forms and Calculate Values.</li>
+      <li>Adding a digital signature and Signing PDF Documents.</li>
+      <li>Fast and simple PDF forms fill out.</li>
+    </ul>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://code-industry.net/wp-content/uploads/2015/06/mpe4-1.jpg</image>
+      <image type="source">https://code-industry.net/wp-content/uploads/2015/06/mpe4-2.jpg</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="4.3.89" date="2018-03-21">
+      <description>
+        <ul>
+          <li>Fixed issue with application's settings reset.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.3.88" date="2018-03-20">
+      <description>
+        <ul>
+          <li>Improved printing system and fixed some related errors.</li>
+          <li>Fixed several crash-related bugs.</li>
+          <li>Linux version is optimized for later distros.</li>
+          <li>Extended application localization. Added Finnish language.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.3.82" date="2018-01-27">
+      <description>
+        <ul>
+          <li>Fixed issue of certificates properties reading.</li>
+          <li>Fixed issues of Java Text Editor.</li>
+          <li>Fixed issues with PDF form events.</li>
+          <li>Fixed issues of Document Properties.</li>
+          <li>Fixed issues of opening files according to settings set in Document Properties. Fixed some issues which violated stability.</li>
+          <li>Fixed incorrect render of some files.</li>
+          <li>Reworked Print system. Print and Print Preview functions are merged into single optimized window. Also added new functionality for printing. Fixed issue of printing documents on A4 paper in Linux and macOS.</li>
+          <li>Optimized OCR.</li>
+          <li>Fixed saving settings when creating watermark and background.</li>
+          <li>Fixed some other issues.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.3.62" date="2017-10-09">
+      <description>
+        <ul>
+          <li>Fixed issues with virtual PDF printer (Windows version only).</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.3.61" date="2017-10-03">
+      <description>
+        <ul>
+          <li>Improved export to image, now it is possible to choose if comments should be exported.</li>
+          <li>Fixed bug when creating Header and Footer and Watermark.</li>
+          <li>Fixed issues with text editing.</li>
+          <li>Fixed issue with theme reset when opening several instances at once.</li>
+          <li>Fixed issue with transparency when creating vector images.</li>
+          <li>Fixed issue with opening in new window.</li>
+          <li>Fixed typewriter issue with border color.</li>
+          <li>Fixed other issues.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.3.50" date="2017-09-18">
+      <description>
+        <ul>
+          <li>Greatly improved text editor.</li>
+          <li>Fixed multiple bugs and issues.</li>
+          <li>Extended localization.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.3.10" date="2017-09-07">
+      <description>
+        <ul>
+          <li>Fixed multiple bugs and issues.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.3.00" date="2017-09-03">
+      <description>
+        <ul>
+          <li>Added ADF (Automatic document feeder) support for scanners.</li>
+          <li>Fixed multiple bugs and issues.</li>
+          <li>Extended localization.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.2.70" date="2017-07-24">
+      <description>
+        <ul>
+          <li>Fixed some printing issues.</li>
+          <li>Fixed issues with export to text.</li>
+          <li>Greatly increased speed of Object TreeView.</li>
+          <li>Fixed issues with Typewriter comment.</li>
+          <li>Added settings for Typewriter comment.</li>
+          <li>Extended application’s localization. Full translation is ready for 10 languages, 5 more have 60-80% completed translation</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.2.68" date="2017-07-20">
+      <description>
+        <ul>
+          <li>Fixed several different issues.</li>
+          <li>Extended application’s localization.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.2.63" date="2017-07-10">
+      <description>
+        <ul>
+          <li>Fixed some critical bugs.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.2.60" date="2017-07-07">
+      <description>
+        <ul>
+          <li>Added new comment type “Typewriter” and fixed some issues with comments.</li>
+          <li>Added possibility to use formatted text when signing with certificate.</li>
+          <li>Fixed issues with fonts like Symbol, ZapfDingbats and other non-unicode fonts.</li>
+          <li>Added other functions, fixed minor issues.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.2.30" date="2017-06-28">
+      <description>
+        <ul>
+          <li>Added functionality to create and edit any actions on document opening.</li>
+          <li>Extended object tree functionality.</li>
+          <li>Improved comments editing.</li>
+          <li>Extended JavaScript support.</li>
+          <li>Added other functions, fixed minor issues.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.2.12" date="2017-06-14">
+      <description>
+        <ul>
+          <li>Added Object Tree toolbar for better access to objects. In different modes number of objects displayed in Object Tree will be different. These may be all objects, text only, forms only or comments only. Next version will noticeably extend Object Tree functionality.</li>
+          <li>Extended document printing functionality. For Linux and Mac versions everything is printed as vector image same as for Windows. Still possible to use «Print as Image» option. Also fixed some issues with print.</li>
+          <li>Added possibility to also use png, jpg, tiff and other files besides pdf when creating Watermarks and Background.</li>
+          <li>Due to numerous requests, disabled pdf files extension check. Now extension is ignored when pdf is loaded, only file content is checked.</li>
+          <li>Added «Load all objects separately» option. Disable it to improve render of some PDF files if you have issues. If you mostly edit PDF documents, this should be enabled.</li>
+          <li>Added pdf forms settings: creation and edition of button icons, current value and default value are now different properties of text fields, etc.</li>
+          <li>Fixed some JavaScript issues.</li>
+          <li>Added other functions, fixed minor issues.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.1.30" date="2017-04-11">
+      <description>
+        <ul>
+          <li>Added templates for signature creation.</li>
+          <li>Fixed several different issues.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.1.22" date="2017-04-05">
+      <description>
+        <ul>
+          <li>Fixed several different issues.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.1.20" date="2017-04-02">
+      <description>
+        <ul>
+          <li>Fixed some critical bugs.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.1.01" date="2017-03-30">
+      <description>
+        <ul>
+          <li>Redesigned new document creation and pages insertion functions from scratch.</li>
+          <li>Improved scanning. Now the application almost doesn’t consume RAM if scanning into new document despite any number of pages. Same option for creating PDF out of existing files.</li>
+          <li>Added 256 bit AES encryption.</li>
+          <li>Fixed critical scanning issues in Linux.</li>
+          <li>Improved work with digital certificate signature. Fixes issues with signature appearance settings. Also its text is now saved as vector image, not raster which leads to significant render quality improvement.</li>
+          <li>Added possibility to set up hotkeys for any menu item.</li>
+          <li>Redesigned printing function for Windows. Now it is possible to print all the text and vector images as vector graphics. This option will also be available for Linux and macOS versions.</li>
+          <li>Added start panel with quick access to recent files and basic functions required after application launch.</li>
+          <li>Fixed issues in user interface, dark style particularly.</li>
+          <li>Extended program localization. Added 100% complete localization for Portuguese-Brazilian and majority extended  French, Polish and Spanish localization.</li>
+          <li>Fixed some issues with XFA format.</li>
+          <li>Added other functions, fixed minor issues.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.0.60" date="2017-02-23">
+      <description>
+        <ul>
+          <li>Master PDF Editor 4 with spectacular improvements and new features including OCR is out for macOS now!</li>
+          <li>Improved creation of new document from existing files. Now files of the following formats can be used: PDF SVG SVGZ TIF PNG JPEG BMP PPM.</li>
+          <li>Extended application’s localization. Localization for following languages is 100% complete: English, German, Greek, Italian, Russian, Slovenian, Swedish. Not fully complete localization (about 75 %) for following languages: Armenian, French, Hungarian, Polish, Portuguese-Brazilian, Spanish.</li>
+          <li>Fixed several different issues.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.0.40" date="2017-02-08">
+      <description>
+        <ul>
+          <li>Fixed some critical bugs, among them of functions like Extract Pages, Scanning, Save Optimized As…</li>
+          <li>Fixed memory leak.</li>
+          <li>Extended application’s localization.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.0.30" date="2017-01-16">
+      <description>
+        <ul>
+          <li>Improved work with scanner. Now on Linux, image can be rotated or cut before inserting to the document page after scanning.</li>
+          <li>Fixed several different issues.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.0.20" date="2017-01-10">
+      <description>
+        <ul>
+          <li>Added show/hide main menu function. Also “Full screen” mode is displayed without menu now. Function doesn’t work in systems where main menu is global like macOS or Ubuntu Unity.</li>
+          <li>Fixed issues with hotkeys, particularly for Unity desktop in Ubuntu.</li>
+          <li>Fixed issues with OCR, including issues with languages installation.</li>
+          <li>Fixed other issues.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.0.10" date="2016-12-29">
+      <p>Master PDF Editor 4.0 is based on version 3 890wbmm.x. New release of the established PDF editor has all the best of what was implemented for earlier versions, but with lots of bug-fixes, new features and tools.</p>
+      <description>
+        <ul>
+          <li>Added function of scanning paper document into PDF file.</li>
+          <li>Added OCR – optical character recognition.</li>
+          <li>Added “Add/Delete Headers and Footers” function.</li>
+          <li>Added “Add/Delete Watermarks” function.</li>
+          <li>Added “Add/Delete Background” function.</li>
+          <li>Added functionality for PDF export to text format.</li>
+          <li>Added functionality of image files convertion to PDF.</li>
+          <li>Added “Send by email” function with default email delivery application or SMTP.</li>
+          <li>Menu View has another one new kind of document display on screen – “Show Cover Page During Facing.”</li>
+          <li>Added work with Stamps.</li>
+          <li>Added virtual grid and implemented possibility to move objects by it.</li>
+          <li>Added different types of comments.</li>
+          <li>Added «Measuring tools» in comments.</li>
+          <li>Added possibility to export/import PDF forms when exporting/importing pages.</li>
+          <li>Added possibility to use system fonts in PDF forms.</li>
+          <li>Added search function for following parameters: “Whole Words Only” and “Find Previous”.</li>
+          <li>Improved general text search algorithm.</li>
+          <li>Increased number of JavaScript supported functions, fixed issues with global functions and variables.</li>
+          <li>Added “Full Screen” function.</li>
+          <li>Increased number of settable PDF document properties (File – Properties – Initial View) Also improved possibility to display document according to these properties on opening, if Default is set in Default Layout and Zoom.</li>
+          <li>Fixed issues, which occurred on re-saving of some PDF documents.</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+  <content_rating type="oars-1.1">
+    <content_attribute id="money-purchasing">intense</content_attribute>
+  </content_rating>
+</component>

@@ -1,0 +1,22 @@
+name: Flatpak
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  flatpak:
+    name: "Flatpak"
+    runs-on: ubuntu-latest
+    container:
+      image: bilelmoussaoui/flatpak-github-actions:freedesktop-24.08
+      options: --privileged
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: true
+    - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+      with:
+        bundle: masterpdfeditor4.flatpak
+        manifest-path: net.code_industry.MasterPDFEditor4.yaml

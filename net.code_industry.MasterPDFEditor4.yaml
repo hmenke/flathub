@@ -1,0 +1,61 @@
+app-id: net.code_industry.MasterPDFEditor4
+runtime: org.kde.Platform
+runtime-version: 5.15-24.08
+sdk: org.kde.Sdk
+command: masterpdfeditor4wrapper
+finish-args:
+  - --device=dri
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --socket=cups
+modules:
+  - name: sane-backends
+    sources:
+      - type: git
+        url: https://gitlab.com/sane-project/backends.git
+        tag: 1.3.1
+        commit: 3ff55fd8ee04ae459e199088ebe11ac979671d0e
+    post-install:
+      - echo 127.0.0.1 > /app/etc/sane.d/net.conf
+      - echo net > /app/etc/sane.d/dll.conf
+
+  - name: libpkcs11-helper
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://github.com/OpenSC/pkcs11-helper/releases/download/pkcs11-helper-1.30.0/pkcs11-helper-1.30.0.tar.bz2
+        sha256: 4c5815ba910cabf26df08d449ca2909daf4538c9899aa7f7fadc61229d3488a9
+
+  - name: masterpdfeditor4
+    buildsystem: simple
+    build-commands:
+      - mkdir -p /app/bin
+      - ln -s /app/{extra,bin}/masterpdfeditor4
+      - install -Dm 755 apply_extra.sh /app/bin/apply_extra
+      - install -Dm 644 net.code_industry.MasterPDFEditor4.metainfo.xml -t /app/share/metainfo
+      - install -Dm 644 net.code_industry.MasterPDFEditor4.desktop -t /app/share/applications
+      - install -Dm 644 net.code_industry.MasterPDFEditor4.png -t /app/share/icons/hicolor/128x128/apps
+      - install masterpdfeditor4wrapper.sh /app/bin/masterpdfeditor4wrapper
+    sources:
+      - type: extra-data
+        url: http://code-industry.net/public/master-pdf-editor-4.3.89_qt5.amd64.tar.gz
+        filename: master-pdf-editor.tar.gz
+        sha256: ac77db75bcc5f2bce21d98a55c07176e15682b0abe5a83708c53d38721fdab4c
+        size: 15002050
+      - type: script
+        dest-filename: apply_extra.sh
+        commands:
+          - tar --strip-components=1 -xf master-pdf-editor.tar.gz
+          - rm master-pdf-editor.tar.gz
+      - type: file
+        path: net.code_industry.MasterPDFEditor4.metainfo.xml
+      - type: file
+        path: net.code_industry.MasterPDFEditor4.desktop
+      - type: file
+        path: net.code_industry.MasterPDFEditor4.png
+      - type: script
+        dest-filename: masterpdfeditor4wrapper.sh
+        commands:
+          - export TMPDIR="$XDG_RUNTIME_DIR/app/${FLATPAK_ID:-net.code_industry.MasterPDFEditor4}"
+          - /app/bin/masterpdfeditor4 "$@"

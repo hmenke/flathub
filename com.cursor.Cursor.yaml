@@ -1,0 +1,77 @@
+app-id: com.cursor.Cursor
+
+runtime: org.freedesktop.Platform
+runtime-version: &runtime-version '24.08'
+sdk: org.freedesktop.Sdk
+base: org.electronjs.Electron2.BaseApp
+base-version: *runtime-version
+
+command: cursor
+finish-args:
+  - --device=dri
+  - --env=ELECTRON_TRASH=gio
+  - --filesystem=host
+  - --share=ipc
+  - --share=network
+  - --socket=fallback-x11
+  - --socket=pulseaudio
+  - --socket=wayland
+  - --system-talk-name=org.freedesktop.login1
+  - --talk-name=org.freedesktop.Flatpak
+  - --talk-name=org.freedesktop.Notifications
+
+modules:
+  - name: cursor
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 -t /app/bin/ apply_extra cursor
+      - |
+        for s in 22 24 32 48 64 128 256 512; do
+          install -Dm644 ${s}.png /app/share/icons/hicolor/${s}x${s}/apps/${FLATPAK_ID}.png
+        done
+      - install -Dm644 ${FLATPAK_ID}.desktop -t /app/share/applications/
+    sources:
+      - type: extra-data
+        filename: appimage
+        url: https://downloads.cursor.com/production/client/linux/x64/appimage/Cursor-0.46.11-ae378be9dc2f5f1a6a1a220c6e25f9f03c8d4e19.deb.glibc2.25-x86_64.AppImage
+        sha256: 25191161e875de4dd97872eb70b643c8ccd961fe3046c76a9b6ec7695e5ac05c
+        size: 186148032
+      - type: script
+        dest-filename: apply_extra
+        commands:
+          - unappimage appimage
+          - mv squashfs-root/usr ./
+          - rm -rf appimage squashfs-root/
+      - type: script
+        dest-filename: cursor
+        commands:
+          - exec zypak-wrapper /app/extra/usr/bin/cursor --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations "$@"
+      - type: file
+        path: com.cursor.Cursor.desktop
+      - type: file
+        path: icons/22.png
+      - type: file
+        path: icons/24.png
+      - type: file
+        path: icons/32.png
+      - type: file
+        path: icons/48.png
+      - type: file
+        path: icons/64.png
+      - type: file
+        path: icons/128.png
+      - type: file
+        path: icons/256.png
+      - type: file
+        path: icons/512.png
+    modules:
+      - name: unappimage
+        no-autogen: true
+        subdir: squashfs-tools
+        make-install-args:
+          - "INSTALL_DIR=/app/bin"
+        sources:
+          - type: git
+            url: "https://github.com/refi64/unappimage"
+            branch: master
+            commit: d7f86f2a0d7ec3a69211125207d5f127386b849a
